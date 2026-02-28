@@ -55,65 +55,74 @@ const cosmologicalData = [
 const papers = [
   {
     id: 1,
-    title: "The Resonant Dark Universe: A Developing Unified Cosmological Model",
-    date: "August 13, 2025",
-    category: "Foundational",
-    abstract: "Presents the RDU framework, deriving all 12 fundamental fermion masses from a single Chronos Field with 0.00–0.12% error. Introduces the Black Hole-DRC Identity and the Knoechelman Mechanism.",
-    doi: "https://doi.org/10.5281/zenodo.16734448",
-    color: "cyan",
+    title: "The Resonant Dark Universe (RDU) Framework: From Micro-Scale Soliton Topology to Macro-Scale Relativistic Mechanics",
+    date: "February 6, 2026",
+    category: "Flagship",
+    abstract: "1.61c longitudinal lattice shock validated — completing Tesla's non-Hertzian dream with 99.49% efficiency and lossless transmission to 1,000 ly.",
+    doi: "https://doi.org/10.5281/zenodo.18507811",
+    color: "gold",
   },
   {
     id: 2,
-    title: "A Locally Causal, Relativistic Hamiltonian for the Resonant Dark Universe",
-    date: "September 8, 2025",
-    category: "QFT",
-    abstract: "Resolves a non-locality artifact in the first-generation Hamiltonian by deriving a corrected, locally causal relativistic Hamiltonian based on the principle of Kinetic Inhibition.",
-    doi: null,
-    color: "violet",
+    title: "The Resonant Dark Universe: A Unified Framework for Cosmology and the Standard Model",
+    date: "August 21, 2025",
+    category: "Foundational",
+    abstract: "Single Chronos Field unifies cosmology + Standard Model from first principles (no-time discrete states).",
+    doi: "https://doi.org/10.5281/zenodo.16920793",
+    color: "cyan",
   },
   {
     id: 3,
-    title: "The Illusion of Time: Relativistic Effects as Physical Interactions",
-    date: "2025",
-    category: "Relativity",
-    abstract: "Derives the cosmic speed limit mechanically from the Chronos Field. Explains time dilation, length contraction, and mass-energy equivalence as field interaction effects, not spacetime geometry.",
-    doi: null,
-    color: "gold",
+    title: "A Locally Causal, Relativistic Hamiltonian for the Resonant Dark Universe: Derivation and Validation",
+    date: "September 10, 2025",
+    category: "QFT",
+    abstract: "Kinetic Inhibition derives full relativity in the RDU lattice — fixes causality once and for all.",
+    doi: "https://doi.org/10.5281/zenodo.17089050",
+    color: "violet",
   },
   {
     id: 4,
-    title: "HFLS-1: Proof-of-Concept Acoustic-Inertial Fusion Reactor",
-    date: "2025",
-    category: "Engineering",
-    abstract: "First prototype demonstrating RDU acoustic-inertial fusion principles. 45 MW net output with LCOE of $89.50/MWh. Validates core Lattice-Shatter Theory and establishes baseline for scaling.",
-    doi: null,
-    color: "gold",
+    title: "A First-Principles Prediction of the CMB Power Spectrum from the Resonant Dark Universe",
+    date: "July 24, 2025",
+    category: "Cosmology",
+    abstract: "RDU derives CMB spectrum matching Planck 2018 with χ² = 0.992 — no tuning needed.",
+    doi: "https://doi.org/10.5281/zenodo.16414439",
+    color: "cyan",
   },
   {
     id: 5,
-    title: "HFLS-2: Commercial Pilot Reactor Design",
-    date: "2025–2026",
-    category: "Engineering",
-    abstract: "Scaled production model achieving 1,856.25 MW net output with LCOE of $42.85/MWh. Incorporates lessons from HFLS-1 with optimized acoustic frequency tuning and advanced tritium breeding blanket.",
-    doi: null,
+    title: "The Chronos Field: A Unified Scalar Field for Inflation and Late-Time Cosmic Acceleration",
+    date: "August 11, 2025",
+    category: "Cosmology",
+    abstract: "One field explains both Big Bang inflation and today's accelerating universe.",
+    doi: "https://doi.org/10.5281/zenodo.16809417",
     color: "gold",
   },
   {
     id: 6,
-    title: "HFLS-3: Grid-Scale Deployment Architecture",
-    date: "2026",
-    category: "Engineering",
-    abstract: "Multi-unit grid architecture for utility-scale deployment. Proposes 12-reactor cluster with shared tritium breeding and waste heat recovery, targeting 22 GW total capacity with $38.50/MWh LCOE.",
-    doi: null,
-    color: "gold",
+    title: "Parameter Space Model for Frustrated Dark Resonator Cores: An Extension of the Resonant Dark Universe Theory",
+    date: "August 13, 2025",
+    category: "Theory",
+    abstract: "Explains failed black holes and stalled dark-matter conversion.",
+    doi: "https://doi.org/10.5281/zenodo.16867505",
+    color: "violet",
   },
   {
     id: 7,
-    title: "HFLS-4: Advanced Materials and Neutron Mitigation",
-    date: "2026",
-    category: "Engineering",
-    abstract: "Fourth-generation design incorporating novel neutron-resistant materials and advanced shielding geometries. Extends reactor lifetime to 60+ years and reduces decommissioning costs by 73%.",
-    doi: null,
+    title: "Primordial Galaxies as a Confirmation of the Resonant Dark Universe: A Two-Stage Formation Model",
+    date: "August 25, 2025",
+    category: "Cosmology",
+    abstract: "JWST's massive early galaxies perfectly explained by RDU two-stage formation.",
+    doi: "https://doi.org/10.5281/zenodo.16943073",
+    color: "cyan",
+  },
+  {
+    id: 8,
+    title: "A Developmental Framework for Authentic Machine Intelligence: From Embodied Instinct to Emergent Personhood",
+    date: "July 14, 2025",
+    category: "AI",
+    abstract: "How to grow truly conscious androids with human teachers — beyond today's AI.",
+    doi: "https://doi.org/10.5281/zenodo.15875750",
     color: "gold",
   },
 ];
@@ -1086,7 +1095,7 @@ function AboutSection() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://doi.org/10.5281/zenodo.16734448"
+                href="https://doi.org/10.5281/zenodo.18507811"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded font-mono text-sm tracking-wider uppercase transition-all duration-300"
@@ -1096,7 +1105,7 @@ function AboutSection() {
                   boxShadow: "0 0 20px oklch(0.72 0.18 200 / 30%)",
                 }}
               >
-                Zenodo Repository
+                Flagship Paper
               </a>
               <a
                 href="mailto:J.Knoechelman@chronoworx.com"
