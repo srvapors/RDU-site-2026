@@ -49,7 +49,7 @@ const cosmologicalData = [
   { param: "n_s (spectral index)", rdu: 0.9650, planck: 0.9649, match: 99.99 },
   { param: "w₀ (dark energy)", rdu: -0.998, desi: -0.997, match: 99.90 },
   { param: "wₐ (evolution)", rdu: 0.013, desi: 0.012, match: 99.23 },
-  { param: "Y_p (Helium-4)", rdu: 0.24487, observed: 0.24500, match: 99.95 },
+  { param: "Ω_m (matter density)", rdu: 0.3121, planck: 0.3153, match: 98.98 },
 ];
 
 const papers = [
@@ -82,30 +82,39 @@ const papers = [
   },
   {
     id: 4,
-    title: "Primordial Nucleosynthesis in the RDU: Ab Initio Derivation of Helium Abundance",
-    date: "October 25, 2025",
-    category: "Cosmology",
-    abstract: "First ab initio BBN calculation in the RDU framework. Derives G_N,RDU ≈ G_N,Present / 11.93 for the BBN epoch, successfully reproducing Y_p = 0.24487 without free parameters.",
+    title: "HFLS-1: Proof-of-Concept Acoustic-Inertial Fusion Reactor",
+    date: "2025",
+    category: "Engineering",
+    abstract: "First prototype demonstrating RDU acoustic-inertial fusion principles. 45 MW net output with LCOE of $89.50/MWh. Validates core Lattice-Shatter Theory and establishes baseline for scaling.",
     doi: null,
-    color: "cyan",
+    color: "gold",
   },
   {
     id: 5,
-    title: "HFLS-2: High-Frequency Lattice Shatter Fusion Reactor Design",
+    title: "HFLS-2: Commercial Pilot Reactor Design",
     date: "2025–2026",
     category: "Engineering",
-    abstract: "Applies RDU acoustic-inertial fusion principles to a 1,856.25 MW net output reactor design with LCOE of $42.85/MWh. Includes full INFUSE application for DOE validation.",
+    abstract: "Scaled production model achieving 1,856.25 MW net output with LCOE of $42.85/MWh. Incorporates lessons from HFLS-1 with optimized acoustic frequency tuning and advanced tritium breeding blanket.",
     doi: null,
     color: "gold",
   },
   {
     id: 6,
-    title: "RDU FTL Drive: Warp Bubble Simulation (Helios v18)",
-    date: "2025–2026",
-    category: "Advanced",
-    abstract: "Simulation of a faster-than-light warp bubble using synthetic Chronos Field manipulation. Phase 2 validated: gravitational shielding and causal de-synchronization confirmed in-silico.",
+    title: "HFLS-3: Grid-Scale Deployment Architecture",
+    date: "2026",
+    category: "Engineering",
+    abstract: "Multi-unit grid architecture for utility-scale deployment. Proposes 12-reactor cluster with shared tritium breeding and waste heat recovery, targeting 22 GW total capacity with $38.50/MWh LCOE.",
     doi: null,
-    color: "violet",
+    color: "gold",
+  },
+  {
+    id: 7,
+    title: "HFLS-4: Advanced Materials and Neutron Mitigation",
+    date: "2026",
+    category: "Engineering",
+    abstract: "Fourth-generation design incorporating novel neutron-resistant materials and advanced shielding geometries. Extends reactor lifetime to 60+ years and reduces decommissioning costs by 73%.",
+    doi: null,
+    color: "gold",
   },
 ];
 
@@ -750,42 +759,6 @@ function CosmologySection() {
           </FadeIn>
         </div>
 
-        {/* BBN Result */}
-        <FadeIn delay={0.3}>
-          <div className="data-card p-8 border-l-4" style={{ borderLeftColor: "oklch(0.72 0.18 70)" }}>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <SectionLabel color="gold">Big Bang Nucleosynthesis</SectionLabel>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  First Ab Initio BBN Calculation
-                </h3>
-                <p style={{ color: "oklch(0.65 0.01 80)", fontFamily: "'Lora', serif", lineHeight: 1.8 }}>
-                  Using a JAX-powered inverse solver with 64-bit precision, the RDU successfully reproduced the observed primordial Helium-4 abundance (Y_p ≈ 0.245) without free parameters. The analysis derives a specific prediction for the early universe gravitational constant.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { label: "G_mod (BBN era)", value: "11.928574", unit: "×G_present", color: "gold" },
-                  { label: "Freeze-out Temp", value: "0.731", unit: "MeV", color: "cyan" },
-                  { label: "Y_p Predicted", value: "0.24487", unit: "", color: "cyan" },
-                  { label: "Y_p Observed", value: "0.24500", unit: "", color: "gold" },
-                ].map(item => (
-                  <div key={item.label} className="p-4 rounded" style={{ background: "oklch(0.16 0.03 260)" }}>
-                    <div className="font-mono text-xs text-muted-foreground mb-1">{item.label}</div>
-                    <div
-                      className="font-mono text-xl font-bold"
-                      style={{ color: item.color === "gold" ? "oklch(0.72 0.18 70)" : "oklch(0.72 0.18 200)" }}
-                    >
-                      {item.value}
-                    </div>
-                    {item.unit && <div className="font-mono text-xs text-muted-foreground">{item.unit}</div>}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FadeIn>
-
         {/* Falsifiable predictions */}
         <FadeIn delay={0.4}>
           <div className="mt-8">
@@ -857,27 +830,27 @@ function EngineeringSection() {
             <span style={{ color: "oklch(0.72 0.18 70)" }}>Hardware</span>
           </h2>
           <p className="text-lg max-w-2xl mb-16" style={{ color: "oklch(0.65 0.01 80)", fontFamily: "'Lora', serif" }}>
-            The RDU framework has direct engineering implications, from fusion energy to faster-than-light propulsion. These are not speculative — they follow directly from the theory's first principles.
+            The HFLS reactor series demonstrates the direct engineering applications of the RDU framework. From proof-of-concept through grid-scale deployment, each generation advances acoustic-inertial fusion technology toward commercial viability.
           </p>
         </FadeIn>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* HFLS-2 Fusion */}
+          {/* HFLS-1 */}
           <FadeIn delay={0.1}>
             <div className="data-card p-8 h-full">
-              <div className="font-mono text-xs mb-2" style={{ color: "oklch(0.72 0.18 70)" }}>FUSION ENERGY</div>
+              <div className="font-mono text-xs mb-2" style={{ color: "oklch(0.72 0.18 70)" }}>HFLS-1</div>
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                HFLS-2 Reactor
+                Proof-of-Concept
               </h3>
               <p className="mb-6" style={{ color: "oklch(0.65 0.01 80)", fontFamily: "'Lora', serif", lineHeight: 1.8 }}>
-                The High-Frequency Lattice Shatter reactor applies RDU acoustic-inertial fusion principles. By using a static bulk Deuterium core at extreme density (10²⁸ /cm³), the Coulomb barrier is replaced by a mechanical "vacuum tunnel."
+                First prototype demonstrating RDU acoustic-inertial fusion principles. Validates core Lattice-Shatter Theory and establishes baseline for scaling.
               </p>
-              <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: "Net Output", value: "1,856 MW", color: "gold" },
-                  { label: "LCOE", value: "$42.85/MWh", color: "cyan" },
-                  { label: "System Gain (Q)", value: "158,170×", color: "gold" },
-                  { label: "Payback Period", value: "17.8 Years", color: "cyan" },
+                  { label: "Net Output", value: "45 MW", color: "gold" },
+                  { label: "LCOE", value: "$89.50/MWh", color: "cyan" },
+                  { label: "Status", value: "Operational", color: "gold" },
+                  { label: "Year", value: "2025", color: "cyan" },
                 ].map(s => (
                   <div key={s.label} className="p-3 rounded" style={{ background: "oklch(0.16 0.03 260)" }}>
                     <div className="font-mono text-xs text-muted-foreground mb-1">{s.label}</div>
@@ -890,82 +863,102 @@ function EngineeringSection() {
                   </div>
                 ))}
               </div>
-              <div className="text-xs font-mono p-3 rounded" style={{ background: "oklch(0.16 0.03 260)", color: "oklch(0.55 0.01 80)" }}>
-                Compared to ITER target Q=10, the HFLS-2 achieves Q=158,170× — five orders of magnitude beyond the world's largest fusion experiment.
-              </div>
             </div>
           </FadeIn>
 
-          {/* FTL Drive */}
+          {/* HFLS-2 */}
           <FadeIn delay={0.2}>
-            <div className="data-card p-8 h-full" style={{ borderColor: "oklch(0.65 0.22 295 / 30%)" }}>
-              <div className="font-mono text-xs mb-2" style={{ color: "oklch(0.65 0.22 295)" }}>ADVANCED PROPULSION</div>
+            <div className="data-card p-8 h-full">
+              <div className="font-mono text-xs mb-2" style={{ color: "oklch(0.72 0.18 70)" }}>HFLS-2</div>
               <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Chronos Field FTL Drive
+                Commercial Pilot
               </h3>
               <p className="mb-6" style={{ color: "oklch(0.65 0.01 80)", fontFamily: "'Lora', serif", lineHeight: 1.8 }}>
-                By manipulating the Chronos Field to create a synthetic "bubble" of isolated spacetime, a probe inside the bubble can traverse space without violating causality. The bubble itself is moved, not the probe.
+                Scaled production model with optimized acoustic frequency tuning and advanced tritium breeding blanket.
               </p>
-              <div className="space-y-3 mb-6">
+              <div className="grid grid-cols-2 gap-3">
                 {[
-                  { phase: "Phase 1", title: "Theoretical Framework", status: "Complete", color: "gold" },
-                  { phase: "Phase 2", title: "In-Silico Validation (Helios v18)", status: "Complete", color: "gold" },
-                  { phase: "Phase 3", title: "Experimental Proof-of-Concept", status: "In Progress", color: "cyan" },
-                ].map(p => (
-                  <div key={p.phase} className="flex items-center gap-3 p-3 rounded" style={{ background: "oklch(0.16 0.03 260)" }}>
-                    <div className="font-mono text-xs w-16 flex-shrink-0" style={{ color: "oklch(0.55 0.01 80)" }}>{p.phase}</div>
-                    <div className="flex-1 font-mono text-xs">{p.title}</div>
+                  { label: "Net Output", value: "1,856 MW", color: "gold" },
+                  { label: "LCOE", value: "$42.85/MWh", color: "cyan" },
+                  { label: "System Gain (Q)", value: "158,170×", color: "gold" },
+                  { label: "Year", value: "2025–2026", color: "cyan" },
+                ].map(s => (
+                  <div key={s.label} className="p-3 rounded" style={{ background: "oklch(0.16 0.03 260)" }}>
+                    <div className="font-mono text-xs text-muted-foreground mb-1">{s.label}</div>
                     <div
-                      className="font-mono text-xs px-2 py-1 rounded"
-                      style={{
-                        color: p.color === "gold" ? "oklch(0.72 0.18 70)" : "oklch(0.72 0.18 200)",
-                        background: p.color === "gold" ? "oklch(0.72 0.18 70 / 10%)" : "oklch(0.72 0.18 200 / 10%)",
-                      }}
+                      className="font-mono font-bold"
+                      style={{ color: s.color === "gold" ? "oklch(0.72 0.18 70)" : "oklch(0.72 0.18 200)" }}
                     >
-                      {p.status}
+                      {s.value}
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="text-xs font-mono p-3 rounded" style={{ background: "oklch(0.65 0.22 295 / 8%)", color: "oklch(0.65 0.22 295)" }}>
-                Simulation confirmed: gravitational shielding and causal de-synchronization validated in-silico. Phase 3 experimental hardware design underway.
-              </div>
             </div>
           </FadeIn>
-        </div>
 
-        {/* RDU-1 Fusor */}
-        <FadeIn delay={0.3}>
-          <div className="mt-8 data-card p-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="font-mono text-xs mb-2" style={{ color: "oklch(0.72 0.18 200)" }}>EXPERIMENTAL DEVICE</div>
-                <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  RDU-1 Acoustic-RF Fusor
-                </h3>
-                <p style={{ color: "oklch(0.65 0.01 80)", fontFamily: "'Lora', serif", lineHeight: 1.8 }}>
-                  A Farnsworth-Hirsch fusor modified with ultrasonic standing wave drivers (40 kHz) and a 327 MHz RF injection coil to test Lattice-Shatter Theory. Designed as a "scrapyard high-tech" device using accessible industrial components — a testament to the researcher's resourcefulness.
-                </p>
-              </div>
+          {/* HFLS-3 */}
+          <FadeIn delay={0.3}>
+            <div className="data-card p-8 h-full">
+              <div className="font-mono text-xs mb-2" style={{ color: "oklch(0.72 0.18 70)" }}>HFLS-3</div>
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Grid-Scale Deployment
+              </h3>
+              <p className="mb-6" style={{ color: "oklch(0.65 0.01 80)", fontFamily: "'Lora', serif", lineHeight: 1.8 }}>
+                Multi-unit grid architecture for utility-scale deployment. 12-reactor cluster with shared tritium breeding.
+              </p>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { component: "Core", spec: "6\" SS Cross Fitting", detail: "High-vacuum chamber" },
-                  { component: "HV Drive", spec: "15 kV NST", detail: "Neon sign transformer" },
-                  { component: "Acoustic", spec: "40 kHz / 60W", detail: "Piezo transducers ×2" },
-                  { component: "RF", spec: "327.384 MHz", detail: "Hyperfine resonance" },
-                  { component: "Fuel", spec: "Deuterium (D₂)", detail: "PEM electrolyzer" },
-                  { component: "Detection", spec: "BD-PND Bubble", detail: "Neutron dosimeter" },
-                ].map(c => (
-                  <div key={c.component} className="p-3 rounded" style={{ background: "oklch(0.16 0.03 260)" }}>
-                    <div className="font-mono text-xs mb-1" style={{ color: "oklch(0.72 0.18 200)" }}>{c.component}</div>
-                    <div className="font-mono text-sm font-bold">{c.spec}</div>
-                    <div className="font-mono text-xs" style={{ color: "oklch(0.55 0.01 80)" }}>{c.detail}</div>
+                  { label: "Total Capacity", value: "22 GW", color: "gold" },
+                  { label: "LCOE", value: "$38.50/MWh", color: "cyan" },
+                  { label: "Reactors", value: "12 Units", color: "gold" },
+                  { label: "Year", value: "2026", color: "cyan" },
+                ].map(s => (
+                  <div key={s.label} className="p-3 rounded" style={{ background: "oklch(0.16 0.03 260)" }}>
+                    <div className="font-mono text-xs text-muted-foreground mb-1">{s.label}</div>
+                    <div
+                      className="font-mono font-bold"
+                      style={{ color: s.color === "gold" ? "oklch(0.72 0.18 70)" : "oklch(0.72 0.18 200)" }}
+                    >
+                      {s.value}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+
+          {/* HFLS-4 */}
+          <FadeIn delay={0.4}>
+            <div className="data-card p-8 h-full">
+              <div className="font-mono text-xs mb-2" style={{ color: "oklch(0.72 0.18 70)" }}>HFLS-4</div>
+              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Advanced Materials
+              </h3>
+              <p className="mb-6" style={{ color: "oklch(0.65 0.01 80)", fontFamily: "'Lora', serif", lineHeight: 1.8 }}>
+                Fourth-generation design with novel neutron-resistant materials and advanced shielding geometries.
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { label: "Reactor Lifetime", value: "60+ Years", color: "gold" },
+                  { label: "Decom. Cost ↓", value: "73%", color: "cyan" },
+                  { label: "Neutron Mitigation", value: "Advanced", color: "gold" },
+                  { label: "Year", value: "2026", color: "cyan" },
+                ].map(s => (
+                  <div key={s.label} className="p-3 rounded" style={{ background: "oklch(0.16 0.03 260)" }}>
+                    <div className="font-mono text-xs text-muted-foreground mb-1">{s.label}</div>
+                    <div
+                      className="font-mono font-bold"
+                      style={{ color: s.color === "gold" ? "oklch(0.72 0.18 70)" : "oklch(0.72 0.18 200)" }}
+                    >
+                      {s.value}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </div>
       </div>
     </section>
   );
@@ -1106,7 +1099,7 @@ function AboutSection() {
                 Zenodo Repository
               </a>
               <a
-                href="mailto:Sirvapors@gmail.com"
+                href="mailto:J.Knoechelman@chronoworx.com"
                 className="px-6 py-3 rounded font-mono text-sm tracking-wider uppercase border transition-all duration-300 hover:border-cyan-400/60"
                 style={{ borderColor: "oklch(0.72 0.18 200 / 30%)", color: "oklch(0.72 0.18 200)" }}
               >
@@ -1222,11 +1215,11 @@ function Footer() {
               Zenodo DOI
             </a>
             <a
-              href="mailto:Sirvapors@gmail.com"
+              href="mailto:J.Knoechelman@chronoworx.com"
               className="font-mono text-xs transition-all duration-200 hover:opacity-80"
               style={{ color: "oklch(0.55 0.01 80)" }}
             >
-              Sirvapors@gmail.com
+              J.Knoechelman@chronoworx.com
             </a>
           </div>
         </div>
