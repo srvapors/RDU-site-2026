@@ -1,3 +1,19 @@
+/* =============================================================
+   DESIGN SYSTEM: "Chronos Field" — Cosmic Brutalism meets Scientific Illumination
+   
+   Color Philosophy:
+   - Deep space black (#080c14) as the ground
+   - Warm white (#f8f4ee) for body text — slightly warm to feel human
+   - Chronos Cyan (#06b6d4) — primary interactive elements, field-related concepts
+   - Resonance Gold (#d97706) — key results and achievements
+   - Dark Matter Violet (#8b5cf6) — dark sector content
+   
+   Typography:
+   - Display: "Playfair Display" (700/900) — hero and major section titles
+   - Body: "Lora" (400/500) — readable, warm serif for academic prose
+   - Data: "Space Mono" — equations, numbers, code
+   ============================================================= */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -40,77 +56,49 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* RDU Custom Colors */
+  --color-chronos-cyan: oklch(0.72 0.18 200);
+  --color-resonance-gold: oklch(0.72 0.18 70);
+  --color-dark-matter-violet: oklch(0.65 0.22 295);
+  --color-space-black: oklch(0.09 0.02 260);
+  --color-warm-white: oklch(0.97 0.01 80);
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
-}
-
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
+  --radius: 0.5rem;
+  --background: oklch(0.09 0.02 260);
+  --foreground: oklch(0.97 0.01 80);
+  --card: oklch(0.12 0.02 260);
+  --card-foreground: oklch(0.97 0.01 80);
+  --popover: oklch(0.12 0.02 260);
+  --popover-foreground: oklch(0.97 0.01 80);
+  --primary: oklch(0.72 0.18 200);
+  --primary-foreground: oklch(0.09 0.02 260);
+  --secondary: oklch(0.16 0.03 260);
+  --secondary-foreground: oklch(0.85 0.01 80);
+  --muted: oklch(0.16 0.03 260);
+  --muted-foreground: oklch(0.65 0.01 80);
+  --accent: oklch(0.65 0.22 295);
+  --accent-foreground: oklch(0.97 0.01 80);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.97 0 0);
   --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.72 0.18 200);
+  --chart-1: oklch(0.72 0.18 200);
+  --chart-2: oklch(0.72 0.18 70);
+  --chart-3: oklch(0.65 0.22 295);
+  --chart-4: oklch(0.78 0.15 160);
+  --chart-5: oklch(0.70 0.20 30);
+  --sidebar: oklch(0.12 0.02 260);
+  --sidebar-foreground: oklch(0.97 0.01 80);
+  --sidebar-primary: oklch(0.72 0.18 200);
+  --sidebar-primary-foreground: oklch(0.09 0.02 260);
+  --sidebar-accent: oklch(0.16 0.03 260);
+  --sidebar-accent-foreground: oklch(0.97 0.01 80);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --sidebar-ring: oklch(0.72 0.18 200);
 }
 
 @layer base {
@@ -119,6 +107,13 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Lora', Georgia, serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-mono, code, pre, .data-value {
+    font-family: 'Space Mono', 'Courier New', monospace;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -134,24 +129,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +144,72 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
   }
+  
+  /* RDU Custom Components */
+  .chronos-glow {
+    box-shadow: 0 0 20px oklch(0.72 0.18 200 / 30%), 0 0 40px oklch(0.72 0.18 200 / 15%);
+  }
+  
+  .gold-glow {
+    box-shadow: 0 0 20px oklch(0.72 0.18 70 / 30%), 0 0 40px oklch(0.72 0.18 70 / 15%);
+  }
+  
+  .violet-glow {
+    box-shadow: 0 0 20px oklch(0.65 0.22 295 / 30%), 0 0 40px oklch(0.65 0.22 295 / 15%);
+  }
+  
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, oklch(0.72 0.18 200 / 40%), transparent);
+  }
+  
+  .data-card {
+    background: oklch(0.12 0.02 260);
+    border: 1px solid oklch(1 0 0 / 10%);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .data-card:hover {
+    border-color: oklch(0.72 0.18 200 / 40%);
+    box-shadow: 0 0 20px oklch(0.72 0.18 200 / 15%);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.09 0.02 260);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.72 0.18 200 / 40%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.72 0.18 200 / 70%);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: oklch(0.72 0.18 200 / 30%);
+  color: oklch(0.97 0.01 80);
 }
