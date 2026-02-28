@@ -58,7 +58,7 @@ const papers = [
     title: "The Resonant Dark Universe (RDU) Framework: From Micro-Scale Soliton Topology to Macro-Scale Relativistic Mechanics",
     date: "February 6, 2026",
     category: "Flagship",
-    abstract: "1.61c longitudinal lattice shock validated — completing Tesla's non-Hertzian dream with 99.49% efficiency and lossless transmission to 1,000 ly.",
+    abstract: "Unifies micro and macro scales: particles as State-Lock solitons, relativity as mechanical field consequence. 26-point lattice audits: 213.81% efficiency, σ = 5.6964, mass defect ∆m = 2.71×10−14. Higgs as lattice resonance; mass as integrated field resistance.",
     doi: "https://doi.org/10.5281/zenodo.18507811",
     color: "gold",
   },
